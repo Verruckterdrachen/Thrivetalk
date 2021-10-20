@@ -87,6 +87,8 @@ body {
 	flex: 1 1 auto;
 	&__hero {
 	}
+	&__why {
+	}
 }
 //===================================================================================================================================
 %shape {
@@ -232,6 +234,49 @@ body {
 		@media (max-width: 1300px) {
 			display: none;
 		}
+	}
+}
+//====================================================================================================
+.why {
+	background-color: $blueColor;
+	&__container {
+		padding: 0;
+		@media (min-width: $md2+px) {
+			display: flex;
+		}
+	}
+	&__content {
+		min-width: 64%;
+		color: #fff;
+		@include adaptiv-value("padding-top", 150, 30, 1);
+		@include adaptiv-value("padding-right", 203, 15, 1);
+		@include adaptiv-value("padding-bottom", 95, 30, 1);
+		padding-left: 15px;
+		& > *:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 150%;
+		@include adaptiv-value("margin-bottom", 80, 30, 1);
+	}
+	&__text {
+		font-weight: 300;
+		font-size: 16px;
+		line-height: math.div(28, 16) * 100%;
+		margin: 0 0 math.div(30, 16) * 1em 0;
+		span {
+			font-weight: 700;
+			font-size: 20px;
+			line-height: math.div(29, 20) * 100%;
+		}
+	}
+	&__image {
+		flex: 0 0 36%;
+		padding: 0 0 math.div(604, 1130) * 100% 0;
+		min-width: calc(36% + ((100vw - 1130px) / 2));
 	}
 }
 //</ОСНОВНОЙ БЛОК>====================================================================================================
