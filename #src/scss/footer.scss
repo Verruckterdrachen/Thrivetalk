@@ -1,3 +1,19 @@
 //====================================================================================================
-
+.footer {
+	background-color: $blueColor;
+	&__copy {
+		color: #fff;
+		font-size: 14px;
+		line-height: 150%;
+		font-weight: 700;
+		letter-spacing: -0.4px;
+		padding: 32px 0;
+		&::before {
+			display: inline-block;
+			content: "©";
+			padding: 0 6px 0 0;
+			transform: translateY(2px);
+		}
+	}
+}
 //====================================================================================================
