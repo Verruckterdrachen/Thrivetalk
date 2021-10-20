@@ -25,6 +25,16 @@
 			}
 		}
 	}
+	&_orange {
+		line-height: math.div(23, $fontSize) * 100%;
+		letter-spacing: 0.1em;
+		background-color: $orangeColor;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: darken($orangeColor, 10%);
+			}
+		}
+	}
 }
 //</BUTTONS>====================================================================================================
 

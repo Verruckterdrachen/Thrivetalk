@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('_head.html',{
-"title":"Главная"
+"title":"Home"
 })
 
 <body>
 	<div class="wrapper">
 		@@include('_header.html',{})
 		<main class="page">
-
+			<section class="page__hero hero">
+				<div class="hero__container _container">
+					<div class="hero__body">
+						<div class="hero__logo logo">
+							<a href="index.html" class="logo__link">Thrivetalk</a>
+						</div>
+						<h1 class="hero__title">helping you thrive in all areas of life</h1>
+						<div class="hero__text">Our highly talented therapists can help you with a range of issues including
+							relationships, sex, PTSD, depression, social anxiety, or even just caring for yourself more.</div>
+						<div class="hero__actions">
+							<a href="#" class="hero__button button button_orange">who am i</a>
+							<a href="#" class="hero__link">what do i do</a>
+						</div>
+					</div>
+				</div>
+				<div class="hero__image _ibg">
+					<img src="img/hero/bg.jpg" alt="helping you thrive in all areas of life">
+				</div>
+			</section>
 		</main>
 		@@include('_footer.html',{})
 	</div>
