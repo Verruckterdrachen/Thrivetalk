@@ -513,6 +513,81 @@ textarea:focus {
   letter-spacing: -0.8px;
 }
 
+.category {
+  overflow: hidden;
+  position: relative;
+}
+@media (any-hover: hover) {
+  .category:hover .category__image::before {
+    transform: translateY(100%);
+  }
+}
+@media (any-hover: none) {
+  .category .category__image::before {
+    opacity: 0.9;
+  }
+}
+.category__body {
+  display: block;
+  position: relative;
+}
+.category__content {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+.category__title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: inherit;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 150%;
+}
+@media (max-width: 1130px) {
+  .category__title {
+    font-size: calc(22px + 10 * ((100vw - 320px) / 810));
+  }
+}
+.category__title::before {
+  content: "";
+  top: 0;
+  left: 0;
+  flex: 0 0 12px;
+  width: 12px;
+  height: 12px;
+  margin: 0 20px 0 0;
+  border-radius: 50%;
+  background-color: #f9b640;
+}
+@media (min-width: 1340px) {
+  .category__title {
+    padding: 30px 0 0 0;
+    border-top: 1px solid #fff;
+  }
+}
+.category__image {
+  position: relative;
+  padding: 0 0 100% 0;
+}
+.category__image::before {
+  z-index: 5;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: currentColor;
+  transition: transform 0.3s;
+  transform-origin: bottom right;
+}
+
 /*
 .row:after {
 	display: block;
@@ -1234,4 +1309,119 @@ body.ie {
   flex: 0 0 36%;
   padding: 0 0 53.4513274336% 0;
   min-width: calc(36% + (100vw - 1130px) / 2);
+}
+
+.about {
+  padding-top: 150px;
+  padding-bottom: 120px;
+}
+@media (max-width: 1130px) {
+  .about {
+    padding-top: calc(40px + 110 * ((100vw - 320px) / 810));
+  }
+}
+@media (max-width: 1130px) {
+  .about {
+    padding-bottom: calc(50px + 70 * ((100vw - 320px) / 810));
+  }
+}
+.about__container {
+  text-align: center;
+  position: relative;
+}
+.about__title {
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 137.5%;
+  margin: 0 0 1.875em 0;
+}
+@media (min-width: 1300px) {
+  .about__title {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    margin: 0;
+    transform: translateX(-65px);
+  }
+}
+.about__text {
+  max-width: 588px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 24px;
+  line-height: 133.3333333333%;
+  margin-bottom: 72px;
+}
+@media (max-width: 1130px) {
+  .about__text {
+    font-size: calc(18px + 6 * ((100vw - 320px) / 810));
+  }
+}
+@media (max-width: 1130px) {
+  .about__text {
+    margin-bottom: calc(32px + 40 * ((100vw - 320px) / 810));
+  }
+}
+.about__label {
+  display: inline-block;
+  opacity: 0.5;
+  text-transform: uppercase;
+  line-height: 118.75%;
+  margin: 0 0 1.625em 0;
+}
+.about__categories {
+  display: grid;
+}
+@media (min-width: 767.98px) {
+  .about__categories {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1142px) {
+  .about__categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.about__category:nth-child(1) .category__image {
+  color: #ffe2de;
+}
+.about__category:nth-child(2) .category__image {
+  color: #c4e769;
+}
+.about__category:nth-child(3) .category__image {
+  color: #62d0df;
+}
+.about__category:nth-child(4) .category__image {
+  color: #0052c1;
+}
+.about__category .category__content {
+  padding-top: 72px;
+  padding-right: 52px;
+  padding-bottom: 72px;
+  padding-left: 52px;
+}
+@media (max-width: 1130px) {
+  .about__category .category__content {
+    padding-top: calc(0px + 72 * ((100vw - 320px) / 810));
+  }
+}
+@media (max-width: 1130px) {
+  .about__category .category__content {
+    padding-right: calc(0px + 52 * ((100vw - 320px) / 810));
+  }
+}
+@media (max-width: 1130px) {
+  .about__category .category__content {
+    padding-bottom: calc(0px + 72 * ((100vw - 320px) / 810));
+  }
+}
+@media (max-width: 1130px) {
+  .about__category .category__content {
+    padding-left: calc(0px + 52 * ((100vw - 320px) / 810));
+  }
+}
+@media (max-width: 1340px) {
+  .about__category .category__content {
+    padding: 30px 15px;
+  }
 }
