@@ -1079,6 +1079,9 @@ body.ie {
 .page {
   flex: 1 1 auto;
 }
+.page__services {
+  margin: 0 0 40px 0;
+}
 .hero__image::before, .hero__image img {
   clip-path: path("M835.727 235.963C760.488 105.644 593.85 60.9937 463.531 136.233L235.962 267.62C105.644 342.86 60.9933 509.498 136.233 639.816V639.816C211.472 770.135 378.11 814.785 508.429 739.546L735.998 608.159C866.317 532.919 910.967 366.281 835.727 235.963V235.963Z");
 }
@@ -1558,4 +1561,95 @@ body.ie {
   letter-spacing: -0.5px;
   line-height: 156.25%;
   margin: 0 0 1.25em 0;
+}
+
+.call__container {
+  padding: 0;
+}
+@media (min-width: 767.98px) {
+  .call__container {
+    display: flex;
+  }
+}
+.call__container-rev {
+  flex-direction: row-reverse;
+}
+.call__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-width: 67%;
+  padding: 30px 15px;
+}
+@media (min-width: 767.98px) {
+  .call__content {
+    padding-top: 105px;
+    padding-bottom: 45px;
+    padding-left: 105px;
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1130px) {
+  .call__content {
+    padding-top: calc(0px + 105 * ((100vw - 320px) / 810));
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1130px) {
+  .call__content {
+    padding-bottom: calc(0px + 45 * ((100vw - 320px) / 810));
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1130px) {
+  .call__content {
+    padding-left: calc(0px + 105 * ((100vw - 320px) / 810));
+  }
+}
+.call__title {
+  text-transform: uppercase;
+  line-height: 150%;
+  margin: 0 0 1.5625em 0;
+  letter-spacing: 2px;
+}
+.call__text {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 147.2222222222%;
+  margin: 0 0 0.9722222222em 0;
+}
+@media (max-width: 1130px) {
+  .call__text {
+    font-size: calc(24px + 12 * ((100vw - 320px) / 810));
+  }
+}
+.call__text span {
+  color: #62d0df;
+}
+.call__link {
+  font-weight: 700;
+  color: #f9b640;
+  text-transform: uppercase;
+  line-height: 150%;
+  letter-spacing: 2px;
+  position: relative;
+}
+.call__link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #f9b640;
+  transform: scalex(0);
+  transition: transform 0.3s;
+}
+@media (any-hover: hover) {
+  .call__link:hover::before {
+    transform: scalex(1);
+  }
+}
+.call__image {
+  flex: 0 0 33%;
+  padding: 0 0 70.796460177% 0;
+  min-width: calc(33% + (100vw - 1130px) / 2);
 }
