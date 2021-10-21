@@ -1053,7 +1053,107 @@ body.ie {
   }
 }
 
-.footer {
+.footer__container-out {
+  padding: 0;
+  max-width: 1440px;
+}
+@media (min-width: 991.98px) {
+  .footer__container-out {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+.footer__content {
+  display: grid;
+  align-content: center;
+  min-width: 61%;
+  padding: 30px 15px;
+  gap: 40px;
+}
+@media (min-width: 767.98px) {
+  .footer__content {
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 70px;
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1130px) {
+  .footer__content {
+    padding-left: calc(0px + 70 * ((100vw - 320px) / 810));
+  }
+}
+@media (min-width: 767.98px) {
+  .footer__column:not(:last-child) {
+    border-right: 1px solid #f9f9f9;
+    padding-right: 30px;
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1130px) {
+  .footer__column:not(:last-child) {
+    padding-right: calc(0px + 30 * ((100vw - 320px) / 810));
+  }
+}
+.footer__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+@media (max-width: 1130px) {
+  .footer__title {
+    margin-bottom: calc(10px + 30 * ((100vw - 320px) / 810));
+  }
+}
+.footer__text {
+  color: rgba(34, 53, 111, 0.5);
+  font-size: 14px;
+  line-height: 164.2857142857%;
+}
+.footer__text:not(:last-child) {
+  margin: 0 0 1.7857142857em 0;
+}
+.footer__phone {
+  display: block;
+  color: rgba(34, 53, 111, 0.5);
+  font-size: 14px;
+  line-height: 164.2857142857%;
+  margin: 0 0 0.6666666667em 0;
+  transition: color 0.3s;
+}
+@media (any-hover: hover) {
+  .footer__phone:hover {
+    color: #22356f;
+  }
+}
+.footer__email {
+  color: #006dff;
+}
+@media (any-hover: hover) {
+  .footer__email:hover {
+    text-decoration: underline;
+  }
+}
+.footer__item {
+  color: rgba(34, 53, 111, 0.5);
+  font-size: 14px;
+  line-height: 164.2857142857%;
+}
+.footer__image {
+  flex: 0 0 39%;
+  padding: 0 0 26.3888888889% 0;
+  min-width: calc(39% + (100vw - 1440px) / 2);
+}
+@media (max-width: 991.98px) {
+  .footer__image {
+    padding: 0 0 52.7777777778% 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .footer__container {
+    text-align: center;
+  }
+}
+.footer__bottom {
   background-color: #62d0df;
 }
 .footer__copy {
@@ -1080,11 +1180,6 @@ body.ie {
   content: "©";
   padding: 0 6px 0 0;
   transform: translateY(2px);
-}
-@media (max-width: 767.98px) {
-  .footer {
-    text-align: center;
-  }
 }
 
 .page {

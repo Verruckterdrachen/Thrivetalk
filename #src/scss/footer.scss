@@ -1,6 +1,89 @@
 //====================================================================================================
 .footer {
-	background-color: $blueColor;
+	&__container-out {
+		padding: 0;
+		max-width: 1440px;
+		@media (min-width: $md2+px) {
+			display: flex;
+			flex-direction: row-reverse;
+		}
+	}
+	&__content {
+		display: grid;
+		align-content: center;
+		min-width: 61%;
+		padding: 30px 15px;
+		gap: 40px;
+		@media (min-width: $md3+px) {
+			grid-template-columns: repeat(3, 1fr);
+			@include adaptiv-value("padding-left", 70, 0, 1);
+		}
+	}
+	&__column {
+		@media (min-width: $md3+px) {
+			&:not(:last-child) {
+				border-right: 1px solid #f9f9f9;
+				@include adaptiv-value("padding-right", 30, 0, 1);
+			}
+		}
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 150%;
+		text-transform: uppercase;
+		@include adaptiv-value("margin-bottom", 40, 10, 1);
+	}
+	&__text {
+		color: rgba($mainColor, 0.5);
+		font-size: 14px;
+		line-height: math.div(23, 14) * 100%;
+		&:not(:last-child) {
+			margin: 0 0 math.div(25, 14) * 1em 0;
+		}
+	}
+	&__phone {
+		display: block;
+		color: rgba($mainColor, 0.5);
+		font-size: 14px;
+		line-height: math.div(23, 14) * 100%;
+		margin: 0 0 math.div(10, 15) * 1em 0;
+		transition: color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainColor;
+			}
+		}
+	}
+	&__email {
+		color: #006dff;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__item {
+		color: rgba($mainColor, 0.5);
+		font-size: 14px;
+		line-height: math.div(23, 14) * 100%;
+	}
+	&__image {
+		flex: 0 0 39%;
+		padding: 0 0 math.div(380, 1440) * 100% 0;
+		min-width: calc(39% + ((100vw - 1440px) / 2));
+		@media (max-width: $md2+px) {
+			padding: 0 0 math.div(760, 1440) * 100% 0;
+		}
+	}
+	&__container {
+		@media (max-width: $md3+px) {
+			text-align: center;
+		}
+	}
+	&__bottom {
+		background-color: $blueColor;
+	}
 	&__copy {
 		color: #fff;
 		font-size: 14px;
@@ -15,9 +98,6 @@
 			padding: 0 6px 0 0;
 			transform: translateY(2px);
 		}
-	}
-	@media (max-width: $md3+px) {
-		text-align: center;
 	}
 }
 //====================================================================================================
